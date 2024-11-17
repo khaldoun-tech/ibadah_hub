@@ -1,0 +1,25 @@
+site_name: IbadahHub Documentation
+repo_url: https://github.com/khaldoun-tech/ibadah_hub
+
+
+theme:
+  name: material
+
+nav:
+  - Home: README.md
+  - Main: main.md
+  - Logger: logger.md
+  - Islamic Calendar: islamic_calender.md
+  - Prayer Times: prayer_times.md
+  - Notifications: notifications.md
+  - Qibla Direction: qibla_direction.md
+
+plugins:
+  - mkdocstrings:
+      default: python
+      render: docstring
+
+markdown_extensions:
+  - codehilite
+  - toc:
+      permalink: true

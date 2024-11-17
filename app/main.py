@@ -9,7 +9,14 @@ from app.notifications import PrayerNotifications
 
 
 class MainApp:
+    """
+    Main class to run the application
+    """
+
     def __init__(self):
+        """
+        Initialize the MainApp object.
+        """
         self.city = None
         self.country = None
         self.logger = Logger()
@@ -69,6 +76,11 @@ class MainApp:
         notification_thread.start()
 
     def run(self):
+        """
+        Run the main application loop.
+
+        The user can select different options to interact with the application.
+        """
         self.set_city_and_country()
         self.start_prayer_notifications()
 

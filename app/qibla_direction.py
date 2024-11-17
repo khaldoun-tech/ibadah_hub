@@ -9,6 +9,11 @@ class QiblaDirection:
     def __init__(self, city, country, logger):
         """
         Initializes the Qibla direction calculation.
+
+        Attributes:
+            city (str): The name of the city.
+            country (str): The name of the country.
+            logger (Logger): The logger object to log messages.
         """
         self.logger = logger
         self.city_lat, self.city_lon = self._get_latitude_and_longitude(city, country)

@@ -6,6 +6,15 @@ from tabulate import tabulate
 
 class PrayerTimes:
     def __init__(self, city, country, logger, method=2):
+        """
+        Initialize the PrayerTimes object.
+
+        Args:
+            city (str): Name of the city.
+            country (str): Name of the country.
+            logger (Logger): Logger object to log messages.
+            method (int): Calculation method for prayer times (default is 2).
+        """
         self.city = city
         self.country = country
         self.logger = logger
@@ -52,10 +61,11 @@ class PrayerTimes:
 
         self.logger.info(f'Prayer times for {self.city}, {self.country}:')
         self._print_prayer_times()
-        # for prayer, time in self.timings.items():
-        #    print(f"{prayer}: {time}")
 
     def _print_prayer_times(self):
+        """
+        Print the prayer times in a tabular format
+        """
         current_time = datetime.now().strftime('%H:%M')
         current_time_dt = datetime.strptime(current_time, '%H:%M')
 

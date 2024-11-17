@@ -3,6 +3,14 @@ import logging
 
 class Logger:
     def __init__(self, name='MainApp', log_file='app.log', level=logging.INFO):
+        """
+        Initialize the logger object.
+
+        Args:
+            name (str): Name of the logger.
+            log_file (str): Name of the log file.
+            level (int): Logging level (default is INFO).
+        """
         self.logger = logging.getLogger(name)
         self.logger.setLevel(level)
         formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
